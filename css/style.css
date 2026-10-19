@@ -1,0 +1,346 @@
+/********** Template CSS **********/
+:root {
+    --primary: #3CB815;
+    --secondary: #F65005;
+    --light: #F7F8FC;
+    --dark: #111111;
+}
+
+
+/*** Section Header ***/
+.section-header {
+    position: relative;
+    padding-top: 25px;
+}
+
+.section-header::before {
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 2px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary);
+}
+
+.section-header::after {
+    position: absolute;
+    content: "";
+    width: 90px;
+    height: 2px;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--secondary);
+}
+
+.section-header.text-start::before,
+.section-header.text-start::after {
+    left: 0;
+    transform: translateX(0);
+}
+
+
+/* Mejores frutas y productos */
+.mejores,
+.productos {
+    width: 82%;
+    max-width: 1140px;
+    margin: auto;
+    padding: 60px 0;
+}
+
+/* Filas con Flexbox */
+.fila {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+/* Títulos */
+.mejores h1,
+.caracteristicas h1,
+.productos h1,
+.fincas h1 {
+    font-family: Georgia, serif;
+    font-size: 40px;
+}
+
+/* Párrafos */
+.mejores p,
+.caracteristicas p,
+.productos p {
+    color: #777;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Cabecera */
+.cabecera {
+    padding: 15px 4%;
+}
+
+/* Mejores frutas */
+.mejores .fila > div {
+    flex: 1;
+}
+
+.mejores img {
+    width: 90%;
+    max-width: 400px;
+    border-radius: 50%;
+}
+
+/* Botones */
+.mejores a,
+.tarjeta a,
+.fincas a {
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 30px;
+    background: #3cb815;
+    color: white;
+    text-decoration: none;
+}
+
+/* Nos Caracteriza */
+.caracteristicas {
+    padding: 60px 4%;
+    background: #f7f8fc;
+}
+
+.titulo {
+    max-width: 550px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.caracteristicas .fila {
+    align-items: stretch;
+}
+
+.tarjeta {
+    flex: 1;
+    padding: 30px 20px;
+    background: white;
+    text-align: center;
+}
+
+.tarjeta img {
+    width: 90px;
+    margin-bottom: 20px;
+}
+
+.tarjeta h4 {
+    font-family: Georgia, serif;
+    font-size: 22px;
+}
+
+.tarjeta a {
+    padding: 8px 20px;
+    background: white;
+    color: #3cb815;
+    border: 1px solid #3cb815;
+}
+
+/* Encabezado de productos */
+.productos-encabezado {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.productos-encabezado > div {
+    flex: 1;
+}
+
+/* Categorías */
+.productos ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    padding: 0;
+    list-style: none;
+}
+
+.productos li a {
+    display: block;
+    padding: 8px 12px;
+    border: 1px solid #3cb815;
+    color: #555;
+    text-decoration: none;
+}
+
+.productos li:first-child a {
+    background: #3cb815;
+    color: white;
+}
+
+/* Tres columnas de productos */
+.lista-productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.producto {
+    min-width: 0;
+    border: 1px solid #eee;
+}
+
+.producto img {
+    display: block;
+    width: 100%;
+}
+
+.producto-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.producto-info a {
+    display: block;
+    font-family: Georgia, serif;
+    font-weight: bold;
+    color: #111;
+    text-decoration: none;
+}
+
+.producto-info span {
+    display: block;
+    margin-top: 8px;
+    color: #3cb815;
+}
+
+/* Enlaces debajo del producto */
+.acciones {
+    display: flex;
+    border-top: 1px solid #eee;
+}
+
+.acciones small {
+    width: 50%;
+    padding: 8px 0;
+    text-align: center;
+}
+
+.acciones a {
+    color: #777;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+/* Visita nuestras fincas */
+.fincas {
+    padding: 70px 9%;
+    background: #3cb815;
+    color: white;
+}
+
+.fincas .fila {
+    justify-content: space-between;
+}
+
+.fincas .fila > div:first-child {
+    width: 70%;
+}
+
+.fincas h1 {
+    color: white;
+}
+
+.fincas p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.fincas a {
+    background: #f65005;
+}
+
+/* El blog usa solamente clases Bootstrap en el HTML. */
+
+/* Pie de página */
+.pie {
+    padding: 50px 4%;
+    background: #111;
+    color: #888;
+}
+
+.pie .fila {
+    align-items: flex-start;
+}
+
+.pie .fila > div {
+    flex: 1;
+}
+
+.pie h4 {
+    margin-bottom: 20px;
+    color: white;
+    font-family: Georgia, serif;
+}
+
+.pie a {
+    display: block;
+    padding: 4px 0;
+    color: #888;
+    text-align: left;
+    text-decoration: none;
+}
+
+/* Pantallas pequeñas */
+@media (max-width: 767px) {
+    .fila {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 25px;
+    }
+
+    .mejores,
+    .productos {
+        width: 88%;
+        padding: 40px 0;
+    }
+
+    .mejores img {
+        width: 80%;
+    }
+
+    .mejores h1,
+    .caracteristicas h1,
+    .productos h1,
+    .fincas h1 {
+        font-size: 28px;
+    }
+
+    .productos-encabezado {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .productos ul {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .lista-productos {
+        grid-template-columns: 1fr;
+    }
+
+    .fincas {
+        padding: 45px 6%;
+    }
+
+    .fincas .fila > div:first-child {
+        width: 100%;
+    }
+
+    .pie .fila > div {
+        width: 100%;
+    }
+}
+
